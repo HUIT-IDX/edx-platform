@@ -7,14 +7,14 @@ from openedx.core.djangolib.markup import HTML, Text
 <section class="container activation">
 
   <section class="message">
-    <h1 class="invalid">${_("Invalid email change key")}</h1>
+    <h1 class="invalid">${_("Mã xác nhận thay đổi email không hợp lệ")}</h1>
     <hr class="horizontal-divider">
-    <p> ${_("This e-mail key is not valid. Please check:")}</p>
+    <p> ${_("Mã xác nhận email này không hợp lệ. Vui lòng kiểm tra các lý do sau:")}</p>
     <ul>
-      <li>${_("Was this key already used? Check whether the e-mail change has already happened.")}
-      <li>${_("Did your e-mail client break the URL into two lines?")}
-      <li>${_("The keys are valid for a limited amount of time. Has the key expired?")}
+      <li>${_("Mã này đã được sử dụng rồi? Hãy kiểm tra xem email của bạn đã được thay đổi trước đó chưa.")}
+      <li>${_("Dịch vụ email của bạn có làm ngắt đường dẫn (URL) thành hai dòng không?")}
+      <li>${_("Mã xác nhận chỉ có hiệu lực trong một khoảng thời gian nhất định. Có thể mã này đã hết hạn?")}
     </ul>
-    <p>${Text(_('Go back to the {link_start}home page{link_end}.')).format(link_start=HTML('<a href="/">'), link_end=HTML('</a>'))}</p>
+    <p>${Text(_('Quay lại {link_start}trang chủ{link_end}.')).format(link_start=HTML('<a href="/">'), link_end=HTML('</a>'))}</p>
   </section>
 </section>

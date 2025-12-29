@@ -26,7 +26,7 @@ from common.djangoapps.student.models import CourseEnrollment
 %>
 
 
-<%block name="pagetitle">${_("Dashboard")}</%block>
+<%block name="pagetitle">${_("Bảng điều khiển")}</%block>
 <%block name="bodyclass">view-dashboard is-authenticated</%block>
 
 <%block name="header_extras">
@@ -144,7 +144,7 @@ from common.djangoapps.student.models import CourseEnrollment
 
 </div>
 
-<main id="main" aria-label="Content" tabindex="-1">
+<main id="main" aria-label="Nội dung chính" tabindex="-1">
     <div class="dashboard" id="dashboard-main">
       <div class="main-container">
         <div class="my-courses" id="my-courses">
@@ -227,26 +227,26 @@ from common.djangoapps.student.models import CourseEnrollment
             % endfor
             % if show_load_all_courses_link:
                 <br/>
-                 ${len(course_enrollments)} ${_("results successfully populated,")}
+                 ${len(course_enrollments)} ${_("kết quả đã được điền thành công,")}
                  <a href="${reverse('dashboard')}?course_limit=None">
-                     ${_("Click to load all enrolled courses")}
+                     ${_("Nhấn vào đây để tải tất cả các khóa học đã đăng ký")}
                 </a>
             % endif
             </ul>
           % else:
             <div class="empty-dashboard-message">
               % if display_dashboard_courses:
-                <p>${_("You are not enrolled in any courses yet.")}</p>
+                <p>${_("Bạn chưa đăng ký bất kỳ khóa học nào.")}</p>
                 % if empty_dashboard_message:
                   <p class="custom-message">${empty_dashboard_message | n, decode.utf8}</p>
                 %endif
                 % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
                   <a class="btn btn-primary" href="${marketing_link('COURSES')}">
-                    ${_("Explore courses")}
+                    ${_("Khám phá các khóa học ngay")}
                   </a>
                 %endif
               % else:
-              <p>${_("Activate your account!")}</p>
+              <p>${_("Hãy kích hoạt tài khoản của bạn!")}</p>
               <p class="custom-message">${ activate_account_message | n, decode.utf8 }</p>
               % endif
           </div>
@@ -254,7 +254,7 @@ from common.djangoapps.student.models import CourseEnrollment
 
           % if staff_access and len(errored_courses) > 0:
             <div id="course-errors">
-              <h2>${_("Course-loading errors")}</h2>
+              <h2>${_("Lỗi khi tải khóa học")}</h2>
 
             % for course_dir, errors in errored_courses.items():
                <h3>${course_dir}</h3>
@@ -280,7 +280,7 @@ from common.djangoapps.student.models import CourseEnrollment
         % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
           <div id="dashboard-search-bar" class="search-bar dashboard-search-bar" role="search" aria-label="Dashboard">
             <form class="search-form">
-              <label for="dashboard-search-input">${_('Search Your Courses')}</label>
+              <label for="dashboard-search-input">${_('Tìm kiếm khóa học của bạn')}</label>
               <div class="search-field-wrapper">
                 <input id="dashboard-search-input" type="text" class="search-field"/>
                 <button type="submit" class="search-button" title="${_('Search')}">
@@ -302,13 +302,13 @@ from common.djangoapps.student.models import CourseEnrollment
     <div id="activate-account-modal" class="modal activate-account-modal" aria-hidden="true" tabindex=0 >
       <div class="inner-wrapper" role="dialog" aria-labelledby="activate-account-modal-title" aria-live="polite">
           <h3>
-             ${_("Activate your account so you can log back in")}
+             ${_("Hãy kích hoạt tài khoản để có thể đăng nhập lại")}
             <span class="sr">,
               ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
-              ${_("window open")}
+              ${_("đã mở cửa sổ")}
             </span>
         </h3>
-          <p class="activate-account-modal-body">${Text(_("We sent an email to {strong_start}{email}{strong_end} with a link to activate your account. Can’t find it? Check your spam folder or {link_start}resend the email{link_end}.")).format(
+          <p class="activate-account-modal-body">${Text(_("Chúng tôi đã gửi một email đến địa chỉ {strong_start}{email}{strong_end} kèm theo đường dẫn kích hoạt tài khoản. Không tìm thấy email? Hãy kiểm tra thư mục thư rác (spam) hoặc {link_start}gửi lại email kích hoạt{link_end}.")).format(
               strong_start=HTML('<strong>'),
               email=user.email,
               strong_end=HTML('</strong>'),
@@ -318,7 +318,7 @@ from common.djangoapps.student.models import CourseEnrollment
           </p>
            <div class="activate-account-modal-button">
                <button class="btn btn-primary" id="button">
-                   ${Text(_("Continue to {platform_name}")).format(platform_name=settings.PLATFORM_NAME)}
+                   ${Text(_("Tiếp tục truy cập {platform_name}")).format(platform_name=settings.PLATFORM_NAME)}
                    <svg  style="vertical-align:bottom" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg>
                </button>
            </div>
@@ -333,16 +333,16 @@ from common.djangoapps.student.models import CourseEnrollment
       <span class="icon fa fa-remove" aria-hidden="true"></span>
       <span class="sr">
         ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
-        ${_("Close")}
+        ${_("Đóng")}
       </span>
     </button>
 
     <header>
       <h2 id="email-settings-title">
-        ${Text(_("Email Settings for {course_number}")).format(course_number=HTML('<span id="email_settings_course_number"></span>'))}
+        ${Text(_("Cài đặt Email cho {course_number}")).format(course_number=HTML('<span id="email_settings_course_number"></span>'))}
         <span class="sr">,
           ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
-          ${_("window open")}
+          ${_("đã mở cửa sổ")}
         </span>
       </h2>
       <hr/>
@@ -350,7 +350,7 @@ from common.djangoapps.student.models import CourseEnrollment
 
     <form id="email_settings_form" method="post">
       <input name="course_id" id="email_settings_course_id" type="hidden" />
-      <label><input type="checkbox" id="receive_emails" name="receive_emails" />${_("Receive course emails")} </label>
+      <label><input type="checkbox" id="receive_emails" name="receive_emails" />${_("Nhận email thông báo từ khóa học")} </label>
       <div class="submit">
         <input type="submit" id="submit" value="${_("Save Settings")}" />
       </div>
@@ -364,7 +364,7 @@ from common.djangoapps.student.models import CourseEnrollment
       <span class="icon fa fa-remove" aria-hidden="true"></span>
       <span class="sr">
         ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
-        ${_("Close")}
+        ${_("Đóng")}
       </span>
     </button>
 
@@ -374,7 +374,7 @@ from common.djangoapps.student.models import CourseEnrollment
         <span id='refund-info'></span>
         <span class="sr">,
           ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
-          ${_("window open")}
+          ${_("đã mở cửa sổ")}
         </span>
       </h2>
       <hr/>

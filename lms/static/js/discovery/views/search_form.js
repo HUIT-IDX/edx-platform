@@ -44,8 +44,8 @@
 
             showFoundMessage: function(count) {
                 var msg = ngettext(
-                    'Viewing %s course',
-                    'Viewing %s courses',
+                    'Đang xem %s khóa học',
+                    'Đang xem %s khóa học',
                     count
                 );
                 this.$message.html(interpolate(msg, [count]));
@@ -54,7 +54,7 @@
             showNotFoundMessage: function(term) {
                 if (term) {
                     var msg = interpolate(
-                        gettext('We couldn\'t find any results for "%s".'),
+                        gettext('Chúng tôi không tìm thấy kết quả nào cho "%s".'),
                         [_.escape(term)]
                     );
                     this.$message.html(msg);
@@ -63,7 +63,7 @@
             },
 
             showErrorMessage: function(error) {
-                this.$message.text(gettext(error || 'There was an error, try searching again.'));
+                this.$message.text(gettext(error || 'Có lỗi xảy ra, vui lòng thử lại.'));
             }
 
         });

@@ -20,7 +20,7 @@
                 <div class="table">
                     <div class="intro">
                         <div class="heading-group">
-                            <h3> ${_("You should Register before trying to access the Unit")}</h3>
+                            <h3> ${_("Bạn cần đăng ký khóa học này trước khi truy cập nội dung bài học")}</h3>
                         </div>
                         <div class="heading-group">
                             <p>
@@ -31,10 +31,10 @@
                             <input type="hidden" name="csrfmiddlewaretoken" value="${ csrftoken }"/>
                             <div class="main-cta">
                                 <button class="register" name="enroll" type="submit"
-                                        value="${pgettext('self','Enroll')}">${pgettext('self','Enroll')}<span
+                                        value="${pgettext('self','Enroll')}">${pgettext('self','Đăng ký ngay')}<span
                                         class="sr">${course.display_name_with_default}</span></button>
                                 <button class="register" name="dont_enroll" type="submit"
-                                        value="${_('Don\'t enroll')}">${_('Don\'t enroll')}<span
+                                        value="${_('Don\'t enroll')}">${_('Không đăng ký')}<span
                                         class="sr">${course.display_name_with_default}</span></button>
                             </div>
                         </form>

@@ -7,41 +7,41 @@ from django.utils.translation import gettext as _
 from openedx.core.djangolib.js_utils import js_escaped_string
 %>
 
-<h2>${_("Manage student accounts")}</h2>
+<h2>${_("Quản lý tài khoản học viên")}</h2>
 <form action="${reverse('disable_account_ajax')}" method="post" data-remote="true" class="manage-accounts-form">
-    <label for="username">${_("Username:")}</label>
+    <label for="username">${_("Tên đăng nhập:")}</label>
     <input type="text" id="username" name="username" required="true">
     <br>
     <br>
-    <h3>${_("Profile:")}</h3>
-    <label for="profile-image">${_("Image:")}</label>
+    <h3>${_("Hồ sơ cá nhân:")}</h3>
+    <label for="profile-image">${_("Ảnh đại diện:")}</label>
     <img id="profile-image">
     <br>
-    <label for="profile-name">${_("Name:")}</label>
+    <label for="profile-name">${_("Họ và tên:")}</label>
     <span id="profile-name"></span>
     <br>
     <br>
-    <h3>${_("Choose an action:")}</h3>
-    <label for="disable_action">${_("View Profile")}</label>
+    <h3>${_("Chọn hành động:")}</h3>
+    <label for="disable_action">${_("Xem hồ sơ")}</label>
     <input type="radio" name="account_action" value="" id="view_profile_action" checked="checked">
     <br>
-    <label for="disable_action">${_("Disable Account")}</label>
+    <label for="disable_action">${_("Vô hiệu hóa tài khoản")}</label>
     <input type="radio" name="account_action" value="disable" id="disable_action">
     <br>
-    <label for="reenable_action">${_("Reenable Account")}</label>
+    <label for="reenable_action">${_("Kích hoạt lại tài khoản")}</label>
     <input type="radio" name="account_action" value="reenable" id="reenable_action">
     <br>
-    <label for="remove_profile_image_action">${_("Remove Profile Image")}</label>
-    <input type="radio" name="account_action" value="remove_profile_image" id="remove_profile_image_action"">
+    <label for="remove_profile_image_action">${_("Xóa ảnh đại diện")}</label>
+    <input type="radio" name="account_action" value="remove_profile_image" id="remove_profile_image_action">
     <br>
     <br>
-    <button type="submit">${_("Submit")}</button>
+    <button type="submit">${_("Thực hiện")}</button>
 </form>
 
 
 <p class="account-change-status"></p>
-<h2>${_("Students whose accounts have been disabled")}</h2>
-<p>${_("(reload your page to refresh)")}</p>
+<h2>${_("Danh sách học viên đang bị vô hiệu hóa")}</h2>
+<p>${_("(Tải lại trang để cập nhật danh sách mới nhất)")}</p>
 <table id="account-table" border='1'>
     <tr>
         % for header in headers:

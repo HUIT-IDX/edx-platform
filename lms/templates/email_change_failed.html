@@ -8,16 +8,16 @@ from openedx.core.djangolib.markup import HTML, Text
 <section class="container activation">
 
   <section class="message">
-    <h1 class="invalid">${_("E-mail change failed")}</h1>
+    <h1 class="invalid">${_("Thay đổi địa chỉ Email thất bại")}</h1>
     <hr class="horizontal-divider">
 
     % if err_msg is not UNDEFINED:
     <p>${err_msg}</p>
     % else:
-    <p>${_("We were unable to send a confirmation email to {email}").format(email=email)}</p>
+    <p>${_("Chúng tôi không thể gửi email xác nhận đến địa chỉ {email}").format(email=email)}</p>
     % endif
 
-    <p>${Text(_('Go back to the {link_start}home page{link_end}.')).format(
+    <p>${Text(_('Quay lại trang {link_start}trang chủ{link_end}.')).format(
         link_start=HTML('<a href="/">'),
         link_end=HTML('</a>'))}</p>
   </section>

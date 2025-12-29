@@ -27,17 +27,17 @@ profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
             <div class="dropdown">
                 <a data-hj-suppress class="dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${username}</a>
                 <ul role="menu" class="dropdown-menu dropdown-menu-right" id="${_("Usermenu")}" aria-labelledby="dropdownMenuLink" tabindex="-1">
-                    <li role="presentation"><a role="menuitem" class="dropdown-item" href="${reverse('dashboard')}">${_("Dashboard")}</a></li>
-                    <li role="presentation"><a role="menuitem" class="dropdown-item" href="${settings.ACCOUNT_MICROFRONTEND_URL}">${_("Account")}</a></li>
-                    <li role="presentation"><a role="menuitem" class="dropdown-item" href="${reverse('logout')}">${_("Sign Out")}</a></li>
+                    <li role="presentation"><a role="menuitem" class="dropdown-item" href="${reverse('dashboard')}">${_("Bảng điều khiển")}</a></li>
+                    <li role="presentation"><a role="menuitem" class="dropdown-item" href="${settings.ACCOUNT_MICROFRONTEND_URL}">${_("Tài khoản")}</a></li>
+                    <li role="presentation"><a role="menuitem" class="dropdown-item" href="${reverse('logout')}">${_("Đăng xuất")}</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <ul role="menu" class="nav flex-column align-items-center">
-        <li role="presentation" class="nav-item nav-item-open-collapsed-only collapse"><a role="menuitem" href="${reverse('dashboard')}">${_("Dashboard")}</a></li>
-        <li role="presentation" class="nav-item nav-item-open-collapsed-only"><a role="menuitem" href="${settings.ACCOUNT_MICROFRONTEND_URL}">${_("Account")}</a></li>
-        <li role="presentation" class="nav-item nav-item-open-collapsed-only"><a role="menuitem" href="${reverse('logout')}">${_("Sign Out")}</a></li>
+        <li role="presentation" class="nav-item nav-item-open-collapsed-only collapse"><a role="menuitem" href="${reverse('dashboard')}">${_("Bảng điều khiển")}</a></li>
+        <li role="presentation" class="nav-item nav-item-open-collapsed-only"><a role="menuitem" href="${settings.ACCOUNT_MICROFRONTEND_URL}">${_("Tài khoản")}</a></li>
+        <li role="presentation" class="nav-item nav-item-open-collapsed-only"><a role="menuitem" href="${reverse('logout')}">${_("Đăng xuất")}</a></li>
     </ul>
 % else:
     <ol class="user">

@@ -8,18 +8,18 @@ from openedx.core.djangolib.markup import Text
 <div class="xblock xblock-student_view xblock-student_view-vertical xblock-initialized" id="content_locked" role="tabpanel" aria-labelledby="tab_0">
     <h2 class="hd hd-2 unit-title">
         <span class="icon fa fa-lock" aria-hidden="true">&nbsp</span>${gated_section_name}
-        <span class="sr">${_("Content Locked")}</span>
+        <span class="sr">${_("Nội dung bị khóa")}</span>
     </h2>
     <p/>
     <h3 class="hd hd-3 problem-header">
-        ${_("Content Locked")}
+        ${_("Nội dung bị khóa")}
     </h3>
     <p>
         ${Text(_(
-            "You must complete the prerequisites for '{prereq_section_name}' to access this content."
+            "Bạn phải hoàn thành yêu cầu tiên quyết cho '{prereq_section_name}' để truy cập nội dung này."
         )).format(prereq_section_name=prereq_section_name)}
         <p>
-            <a href="${prereq_url}" class="btn btn-brand">${_("Go to Prerequisite Section")}
+            <a href="${prereq_url}" class="btn btn-brand">${_("Đi đến phần yêu cầu tiên quyết")}
             </a>
         </p>
     </p>

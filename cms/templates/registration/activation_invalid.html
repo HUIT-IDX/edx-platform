@@ -11,18 +11,16 @@ from openedx.core.djangolib.markup import HTML, Text
   <section class="container activation">
 
     <section class="message">
-      <h1 class="invalid" style="padding: 1em;">${_("Activation Invalid")}</h1>
+      <h1 class="invalid" style="padding: 1em;">${_("Kích hoạt không thành công")}</h1>
       <hr class="horizontal-divider">
 
-      <p style="padding: 0 2em;">${Text(_("Something went wrong. Email programs sometimes split URLs "
-                  "into two lines, so make sure the URL you're using is " "formatted correctly. If you still have issues, send us "
-                  "an email message at " "{email_start}{email}{email_end}.")).format(
+      <p style="padding: 0 2em;">${Text(_("Đã xảy ra sự cố. Đôi khi các dịch vụ email tự động ngắt đường dẫn (URL) thành hai dòng, vì vậy hãy kiểm tra kỹ để đảm bảo đường dẫn bạn sử dụng là chính xác. Nếu vẫn gặp sự cố, vui lòng gửi email cho chúng tôi tại {email_start}{email}{email_end}.")).format(
           email_start=HTML('<a href="mailto:{}">').format(settings.BUGS_EMAIL),
           email=settings.BUGS_EMAIL,
           email_end=HTML('</a>')
       )}</p>
 
-      <p style="padding: 0 2em;">${Text(_('Return to the {link_start}home page{link_end}.')).format(
+      <p style="padding: 0 2em;">${Text(_('Quay trở lại {link_start}trang chủ{link_end}.')).format(
              link_start=HTML('<a href="/">'), link_end=HTML('</a>'))}</p>
     </section>
   </section>

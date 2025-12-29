@@ -8,12 +8,12 @@ from openedx.core.djangolib.markup import HTML, Text
 <section class="container activation">
 
   <section class="message">
-    <h1 class="invalid">${_("E-mail change failed")}</h1>
+    <h1 class="invalid">${_("Thay đổi địa chỉ Email thất bại")}</h1>
     <hr class="horizontal-divider">
 
-    <p>${_("An account with the new e-mail address already exists.")}</p>
+    <p>${_("Địa chỉ email mới này đã được đăng ký bởi một tài khoản khác.")}</p>
 
-    <p>${Text(_("Go back to the {link_start}home page{link_end}.")).format(
+    <p>${Text(_("Quay lại trang {link_start}trang chủ{link_end}.")).format(
         link_start=HTML('<a href="/">'),
         link_end=HTML('</a>'))}</p>
   </section>

@@ -2198,7 +2198,7 @@ class TestIndexView(ModuleStoreTestCase):
             request = RequestFactory().get('/')
             request.user = user
 
-            button_html = '<button class="enroll-btn btn-link">Enroll now</button>'
+            button_html = '<button class="enroll-btn btn-link">Ghi danh ngay</button>'
 
             patch_course_open_for_learner_enrollment.return_value = False
             views.CourseTabView.register_user_access_warning_messages(request, course)

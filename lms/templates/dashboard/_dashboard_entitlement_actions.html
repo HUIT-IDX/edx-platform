@@ -39,7 +39,7 @@ dropdown_btn_id = "entitlement-actions-dropdown-btn-{}".format(dashboard_index)
             data-course-name="${course_overview.display_name_with_default}"
             data-course-number="${course_overview.number}"
             data-entitlement-api-endpoint="${reverse('entitlements_api:v1:enrollments', args=[str(entitlement.uuid)]) + '?is_refund=true'}">
-            ${_('Unenroll')}
+            ${_('Hủy đăng ký')}
           </a>
         </li>
       % endif

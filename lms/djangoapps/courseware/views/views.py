@@ -606,7 +606,7 @@ class CourseTabView(EdxFragmentView):
                 if CourseTabView.course_open_for_learner_enrollment(course):
                     enroll_message = _(
                         'You must be enrolled in the course to see course content. '
-                        '{enroll_link_start}Enroll now{enroll_link_end}.'
+                        '{enroll_link_start}Ghi danh ngay{enroll_link_end}.'
                     )
                     PageLevelMessages.register_warning_message(
                         request,

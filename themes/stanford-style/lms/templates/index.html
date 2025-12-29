@@ -19,11 +19,11 @@ from openedx.core.djangolib.markup import HTML
         % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
           <div class="course-search">
             <form method="get" action="/courses">
-              <label><span class="sr">${_("Search for a course")}</span>
-                <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+              <label><span class="sr">${_("Tìm kiếm khóa học")}</span>
+                <input class="search-input" name="search_query" type="text" placeholder="${_("Tìm kiếm khóa học")}"></input>
               </label>
               <button class="search-button" type="submit">
-                <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+                <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Tìm kiếm")}</span>
               </button>
             </form>
           </div>

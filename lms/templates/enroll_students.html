@@ -1,26 +1,26 @@
 <%page expression_filter="h" />
 <%! from django.utils.translation import gettext as _ %>
 
-<h1>${_("Student Enrollment Form")} </h1>
+<h1>${_("Biểu mẫu đăng ký học viên")} </h1>
 
-<p> ${_("Course: ") % course}
+<p> ${_("Khóa học: ") % course}
 
 <form method="POST">
 <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
-<h2> ${_("Add new students")} </h2>
+<h2> ${_("Thêm học viên mới")} </h2>
 <textarea name="new_students">
 </textarea>
 <input type="submit">
 </form>
 
-<p> ${_("Existing students:")}
+<p> ${_("Học viên hiện tại:")}
 
 <p> ${ existing_students }
 
-<p> ${_("New students added: ")}
+<p> ${_("Học viên mới được thêm: ")}
 ${ added_students }
 
-<p> ${_("Students rejected: ")}
+<p> ${_("Học viên bị từ chối: ")}
 ${ rejected_students }
 
 <p> ${_("Debug: ")}

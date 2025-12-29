@@ -85,10 +85,10 @@ from openedx.core.lib.courses import course_image_url
             <a href="${course_target}">
           %endif
 
-          <span class="register disabled">${_("You are enrolled in this course")}</span>
+          <span class="register disabled">${_("Bạn đã đăng ký khóa học này")}</span>
 
           %if show_courseware_link:
-            <strong>${_("View Course")}</strong>
+            <strong>${_("Xem khóa học")}</strong>
             </a>
           %endif
 
@@ -106,7 +106,7 @@ from openedx.core.lib.courses import course_image_url
         %elif allow_anonymous:
           %if show_courseware_link:
             <a href="${course_target}">
-            <strong>${_("View Course")}</strong>
+            <strong>${_("Xem khóa học")}</strong>
             </a>
           %endif
         %else:

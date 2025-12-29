@@ -17,7 +17,7 @@
 <div class="wrapper-content-header wrapper">
   <section class="content content-header">
     <header>
-      <h1><span class="wrapper-text-welcome">${_("Welcome to {studio_name}").format(
+      <h1><span class="wrapper-text-welcome">${_("Chào mừng đến với {studio_name}").format(
           studio_name=settings.STUDIO_NAME
       )}</span></h1>
       <p class="tagline">${_("{studio_name} helps manage your online courses, so you can focus on teaching them").format(
@@ -166,7 +166,7 @@
         <a href="${settings.FRONTEND_REGISTER_URL}?next=${quote_plus(request.build_absolute_uri(settings.LOGIN_URL))}" class="action action-primary">${_("Sign Up & Start Making Your {platform_name} Course").format(platform_name=settings.PLATFORM_NAME)}</a>
       </li>
       <li class="action-item">
-        <a href="${settings.LOGIN_URL}?next=${current_url}" class="action action-secondary">${_("Already have a {studio_name} Account? Sign In").format(studio_name=settings.STUDIO_SHORT_NAME)}</a>
+        <a href="${settings.LOGIN_URL}?next=${current_url}" class="action action-secondary">${_("Bạn đã có tài khoản {studio_name}? Đăng nhập ngay").format(studio_name=settings.STUDIO_SHORT_NAME)}</a>
       </li>
     </ul>
   </section>

@@ -11,9 +11,9 @@
 <% // Hide SSO related messages if we are not in the SSO pipeline.  %>
 <% if (context.enterpriseName && context.currentProvider) { %>
     <% if (context.pipelineUserDetails && context.pipelineUserDetails.email) { %>
-        <h2><%- gettext("Sign in to continue learning as {email}").replace("{email}", context.pipelineUserDetails.email) %></h2>
+        <h2><%- gettext("Đăng nhập để tiếp tục học với {email}").replace("{email}", context.pipelineUserDetails.email) %></h2>
     <% } else { %>
-        <h2><%- gettext("Sign in to continue learning") %></h2>
+        <h2><%- gettext("Đăng nhập để tiếp tục học") %></h2>
     <% } %>
     <p>
         <%- gettext("You already have an edX account with your {enterprise_name} email address.").replace(/{enterprise_name}/g, context.enterpriseName) %>

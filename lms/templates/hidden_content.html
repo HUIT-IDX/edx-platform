@@ -7,18 +7,16 @@ from openedx.core.djangolib.markup import HTML, Text
 <div class="sequence hidden-content proctored-exam completed">
     <h3>
         % if self_paced:
-            ${_("The course has ended.")}
+            ${_("Khóa học đã kết thúc.")}
         % else:
-            ${_("The due date for this assignment has passed.")}
+            ${_("Đã quá hạn chót để nộp bài tập này.")}
         % endif
     </h3>
     <hr>
     <p>
         % if self_paced:
             ${Text(_(
-                "Because the course has ended, this assignment is no longer "
-                "available.{line_break}If you have completed this assignment, your "
-                "grade is available on the {link_start}progress page{link_end}."
+                "Vì khóa học đã kết thúc, bài tập này không còn khả dụng.{line_break}Nếu bạn đã hoàn thành bài tập này, điểm của bạn có thể xem trên {link_start}trang tiến độ{link_end}."
             )).format(
                 line_break=HTML("<br>"),
                 link_start=HTML("<a href='{}'>").format(progress_url),
@@ -26,9 +24,7 @@ from openedx.core.djangolib.markup import HTML, Text
             )}
         % else:
             ${Text(_(
-                "Because the due date has passed, this assignment is no longer "
-                "available.{line_break}If you have completed this assignment, your "
-                "grade is available on the {link_start}progress page{link_end}."
+                "Vì đã quá hạn chót nộp bài, bài tập này không còn khả dụng.{line_break}Nếu bạn đã hoàn thành bài tập này trước đó, điểm số của bạn sẽ hiển thị tại {link_start}trang tiến độ học tập{link_end}."
             )).format(
                 line_break=HTML("<br>"),
                 link_start=HTML("<a href='{}'>").format(progress_url),

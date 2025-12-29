@@ -22,7 +22,7 @@
             </p>
 
                 {% filter force_escape %}
-                {% blocktrans asvar course_cta_text %}Sign in{% endblocktrans %}
+                {% blocktrans asvar course_cta_text %}Đăng nhập{% endblocktrans %}
                 {% endfilter %}
                 {% include "ace_common/edx_ace/common/return_to_course_cta.html" with course_cta_text=course_cta_text course_cta_url=login_link %}
         </td>

@@ -10,6 +10,6 @@ from django.utils.translation import gettext as _
     aria-pressed="${"true" if is_bookmarked else "false"}"
     data-bookmark-id="${bookmark_id}"
     data-bookmarks-api-url="${reverse('bookmarks')}">
-     <span class="bookmark-text">${_("Bookmarked") if is_bookmarked else _("Bookmark this page")}</span>
+     <span class="bookmark-text">${_("Đã đánh dấu") if is_bookmarked else _("Đánh dấu trang này")}</span>
     </button>
 </div>

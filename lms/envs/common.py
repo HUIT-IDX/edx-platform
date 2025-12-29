@@ -3678,3 +3678,9 @@ SSL_AUTH_EMAIL_DOMAIN = "MIT.EDU"
 SSL_AUTH_DN_FORMAT_STRING = (
     "/C=US/ST=Massachusetts/O=Massachusetts Institute of Technology/OU=Client CA v1/CN={0}/emailAddress={1}"
 )
+
+try:
+    if not LMS_ROOT_URL:
+        LMS_ROOT_URL = "http://localhost:8000"
+except NameError:
+    LMS_ROOT_URL = "http://localhost:8000"
